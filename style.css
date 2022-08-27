@@ -1,0 +1,154 @@
+*:before,*:after{
+    box-sizing: border-box;
+}
+*{
+    position:relative;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family : "quicksand";
+}
+html,body{
+    width: 100%;
+    min-height:100vh;
+    position: relative;
+}
+body{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#f1f1f1;
+}
+.Sticky-note {
+    width:20%;
+    position:relative;
+    padding:0 30px;
+}
+.Sticky-note.pinned{
+    position:relative;
+}
+.Sticky-note .pinned i{
+    position:absolute;
+    bottom:-15px;
+    left:50%;
+    transform : translateX(-50%) rotate3d(1,1,1,50deg);
+    font-size:2em;
+    z-index:1;
+}
+.Sticky-note.one .pinned i{
+    color:rgb(0,0,0.2);
+}
+.Sticky-note.two .pinned{
+    color:rgb(0,0,0.2);
+}
+.Sticky-note.three .pinned{
+    color:rgb(0,0,0.2);
+}
+.Sticky-note.four .pinned{
+    color:rgb(0,0,0.2);
+}
+
+.Sticky-note.pinned i:after{
+    content:"\f08d";
+    font-family:'fontAwesome';
+    position:absolute;
+    top:12px;
+    left:16px;
+    transform:rotate(55deg);
+    font-size:1em;
+    color:rgba(0,0,0,.2);
+    filter : blur(4.5px);
+}
+.date-box{
+    padding:40px 0;
+    text-align:center;
+    position:relative;
+    border-bottom-right-radius:25px;
+    overflow:hidden;
+    box-shadow:29px 34px 36px -26px rgba(0,0,0,.5); 
+}
+.Sticky-note.one .date-box{
+    background:#9b59b6;
+}
+.Sticky-note.two .date-box{
+    background:#e74c3c;
+}
+.Sticky-note.three .date-box{
+    background:#1abc9c;
+}
+.Sticky-note.four .date-box{
+    background:#3498db;
+}
+.date-box:before,.date-box:after{
+    content:'';
+    position:absolute;
+    z-index:1;
+    right:-5px;
+    bottom:-5px;
+    width:30px;
+    height:30px;
+    box-shadow: 0px 5px 25px rgba(0,0,0,.5);
+    transform:skew(-5deg) rotate(-3deg);
+}
+.date-box:after{
+    right:-5px;
+    bottom:-5px;
+    transform:skew(3deg) rotate(0deg);
+    box-shadow: 2px 2px 18px rgba(0,0,0,.5);
+}
+.date-box.date{
+    display:inline-block;
+    font-weight:bold;
+    font-size:1.3em;
+    padding:10px 0;
+}
+.date-box.icon{
+    padding:10px 0;
+}
+.date-box .icon img{
+   width:50px;
+   height:50px;
+}
+.content{
+    background:#fff;
+    padding:10px;
+    box-shadow:-1px 4px 16px 0px rgba(0,0,0,.5);
+}
+.tape-box{
+    padding:10px 0;
+}
+.tape-box img{
+    position:absolute;
+    z-index:1;
+    width:80px;
+    height:80px;
+    opacity:.5;
+    top:-40px;
+    left:50%;
+    transform:translateX(-50%) rotate(10deg);
+}
+.content .heading{
+    font-weight:bold;
+    font-weight:1.5em;
+    color:#666;
+    padding-bottom:5px;
+}
+.content .content-text{
+    color:#666;
+    font-size:16px;
+    text-align:justify;
+}
+.Sticky-note.one .content{
+    transform:rotate(-10deg);
+}
+.Sticky-note.two.content{
+    transform:rotate(6deg);
+}
+.Sticky-note.three .content{
+    transform:rotate(-7deg);
+}
+.Sticky-note.four .content{
+    transform:rotate(7deg)
+}
+    
